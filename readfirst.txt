@@ -1,0 +1,18 @@
+How do you deal with non-fast forward error in git?
+What are non-fast forward error in git?
+This is when Git refuse a push from local machine to your remote repository because you are likely to lose previous commit on the remote repository. This usually happens when their have been an update to your remote repository and it's not reflected in your local machine.
+
+SOLUTION
+You can solve this problem by updating your local machine using the following commands:
+
+$git fetch origin
+
+$git merge origin Your_Branch_Name
+
+OR
+
+$git pull origin Your_Branch_Name
+
+
+
+Both set of command fetch and merge updates from the online repository to your local machine then you can push to the repository afterwards.  
